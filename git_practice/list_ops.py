@@ -1,10 +1,25 @@
-def add_lists(foo, bar):
-	minlen = min(len(foo), len(bar))
-	dst = []
-	for i in range(minlen):
-		dst.append(foo[i] + bar[i])
-	return dst
+# list_ops.py
+def add(foo, bar):
+    out = []
+    for f, b in zip(foo, bar):
+        out.append(f + b)
+    return out
 
-if __name__ == "__main__":
-	dst = add_lists([1,2,3], [4,5,6])
-	print(dst)
+def subtract(foo, bar):
+    out = []
+    for f, b in zip(foo, bar):
+        out.append(f - b)
+    return out
+
+# 아래쪽에 추가
+def multiply(foo, bar):
+    out = []
+    for f, b in zip(foo, bar):
+        out.append(f * b)
+    return out
+
+def divide(foo, bar):
+    out = []
+    for f, b in zip(foo, bar):
+        out.append(f / b)
+    return out
